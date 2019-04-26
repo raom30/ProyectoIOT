@@ -24,29 +24,27 @@
 <body id="page-top">
 
   <!-- Page Wrapper -->
-  <div id="wrapper">
+<div id="wrapper">
 
-    <!-- Sidebar -->
+<!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-	 @include('menu.menu')
+     @include('menu.menu')
     </ul>
-    <!-- End of Sidebar -->
+<!-- End of Sidebar -->
 
-    <!-- Content Wrapper -->
+<!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-
+          <!-- Main Content -->
+        <div id="content">
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-		@include('topbar.topbar')
+        @include('topbar.topbar')
         </nav>
         <!-- End of Topbar -->
-	  </div>
-
+        @include('datos.temperaturaHumedad')
+        </div>
+    </div>
 </div>
-
 
 
 
@@ -63,6 +61,8 @@
 
   <!-- Page level plugins -->
   <script src="{{ asset('js/chart.js/Chart.min.js') }}"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
   <!-- Page level custom scripts 
   <script src="js/demo/chart-area-demo.js"></script>

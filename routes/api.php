@@ -16,3 +16,18 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/', function (\Illuminate\Http\Request $request) {
+        
+    return response()->json([
+        'hora' => now()->format("Y-m-d H:i:s"),
+        'temperatura' => $request->get("temperature"),
+        'humedad' => $request->get("humidity") 
+    ]);
+    
+});
+
+Route::get('/datos', function (Request $request) {
+    dd(json_decode($request->getContent(), true));
+
+});
