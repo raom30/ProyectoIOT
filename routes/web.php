@@ -22,3 +22,6 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 Route::post('/', 'HomeController@index');
+
+Route::get('ajax/temperatura', 'TemperaturaController@getTemperaturas');
+Route::get('ajax/humedad', 'HumedadController@getHumedad');

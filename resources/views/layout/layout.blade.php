@@ -63,7 +63,8 @@
   <script src="{{ asset('js/chart.js/Chart.min.js') }}"></script>
   <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-
+<script src="{{ asset('js/datos/temp.js') }}"></script>
+<script src="{{ asset('js/datos/hum.js') }}"></script>
   <!-- Page level custom scripts 
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>-->
