@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Temperatura;
 use App\Humedad;
 
@@ -21,8 +22,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/', function (\Illuminate\Http\Request $request) {
     
+    Log::debug("--------->". $request);
+    
     $temperatura = new Temperatura();
-    $temperatura->temperatura =  $request->get("temperature") == null ? 0 : $request->get("temperature")  ;
+    $temperatura->temperatura = $request->get("?temperature");
     $temperatura->fecha = now()->format("Y-m-d H:i:s");
     $temperatura->save();
     

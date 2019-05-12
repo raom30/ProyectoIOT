@@ -33,15 +33,22 @@ $( document ).ready(function() {
 							type: "area",
 							yValueFormatString: "#0.## °C",
 							showInLegend: true,
-							dataPoints: [
-								{ x: new Date(data.x), y: data.y }
-							]
+							dataPoints: 
+								data
+							
 						}]
 					});
 					chart.render();
 			  }
 			});
 	}, 3000);	
+	
+function humedad(data)
+{
+	for (var i = 0; i < data.length; i++) {
+		return { x: new Date(data[i].fecha), y: data[i].humedad}
+	}
+}
 
 function toggleDataSeries(e){
 	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {

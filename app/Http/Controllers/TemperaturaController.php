@@ -9,17 +9,9 @@ class TemperaturaController extends Controller
 {
 
     public function getTemperaturas() {
-        $temperaturas = Temperatura::all();
+        $temperaturas = Temperatura::select('fecha AS label','temperatura AS y')->where('temperatura','>=', 0)->get()->toJson();
         
-        foreach ($temperaturas as $temperatura){
-            $json = [
-                'x' => $temperatura->fecha,
-                'y' => $temperatura->temperatura
-            ];
-           
-        }
-        
-        return json_encode($json);
+        return $temperaturas;
         
     }
 }

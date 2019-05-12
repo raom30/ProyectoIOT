@@ -1,5 +1,6 @@
-window.onload = function () {
+$( document ).ready(function() {
 
+	setInterval(function(){  
 $.ajax({
 	  url: '/ajax/temperatura',
 	  dataType: "json",
@@ -31,14 +32,13 @@ $.ajax({
 					type: "area",
 					yValueFormatString: "#0.## °C",
 					showInLegend: true,
-					dataPoints: [
-						{ x: new Date(data.x), y: data.y }
-					]
+					dataPoints: data
 				}]
 			});
 			chart.render();
 	  }
 	});
+	}, 3000);	
 
 function toggleDataSeries(e){
 	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
@@ -50,4 +50,4 @@ function toggleDataSeries(e){
 	chart.render();
 }
 
-}
+});
