@@ -15,10 +15,25 @@
  <!-- <link href="{{ asset('css/fontawesome-free/all.min.css') }}" rel="stylesheet" type="text/css">-->
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
   <!-- Custom styles for this template-->
   <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/global.css') }}" rel="stylesheet">
+  
+    <!-- Bootstrap core JavaScript-->
+  <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
+  <!-- Core plugin JavaScript-->
+  <script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{{ asset('js/chart.js/Chart.min.js') }}"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 </head>
 
 <body id="page-top">
@@ -41,33 +56,11 @@
         @include('topbar.topbar')
         </nav>
         <!-- End of Topbar -->
-        @include('datos.temperaturaHumedad')
+         @yield('index')
+         @yield('sidebar')
         </div>
     </div>
 </div>
-
-
-
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
-
-  <!-- Page level plugins -->
-  <script src="{{ asset('js/chart.js/Chart.min.js') }}"></script>
-  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-<script src="{{ asset('js/datos/temp.js') }}"></script>
-<script src="{{ asset('js/datos/hum.js') }}"></script>
-  <!-- Page level custom scripts 
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>-->
 
 </body>
 

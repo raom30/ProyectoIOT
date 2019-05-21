@@ -1,9 +1,9 @@
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-home"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Aministrador IOT</div>
+    <div class="sidebar-brand-text mx-3">Aministrador Hogar</div>
   </a>
 
   <!-- Divider -->
@@ -15,6 +15,11 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Inicio</span></a>
   </li>
+    {{--<li class="nav-item active">
+    <a class="nav-link" href="{{url('/temperaturaHumedad')}}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Control Temperatura y Humedad</span></a>
+  </li>--}}
 
   <!-- Sidebar Toggler (Sidebar) -->
   <div class="text-center d-none d-md-inline">
