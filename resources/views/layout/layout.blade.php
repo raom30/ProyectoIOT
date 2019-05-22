@@ -52,12 +52,13 @@
           <!-- Main Content -->
         <div id="content">
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
         @include('topbar.topbar')
         </nav>
         <!-- End of Topbar -->
          @yield('index')
          @yield('sidebar')
+         @yield('users')
         </div>
     </div>
 </div>

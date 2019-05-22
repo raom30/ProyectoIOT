@@ -1,41 +1,38 @@
 <!-- Topbar Navbar -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 <ul class="navbar-nav ml-auto">
-
-<div class="topbar-divider d-none d-sm-block"></div>
-
 <!-- Nav Item - User Information -->
 <li class="nav-item dropdown no-arrow">
   <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Rafael Alvarez-Ossorio Martín</span>
+    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
   </a>
   <!-- Dropdown - User Information -->
   <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
     <a class="dropdown-item" href="#">
       <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-      Profile
+      Perfil
     </a>
-    <a class="dropdown-item" href="#">
+    @if(Auth::user()->hasRole('admin'))
+    <a class="dropdown-item" href="/configuracionUsuarios">
       <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-      Settings
+      Configuración Usuarios
     </a>
-    <a class="dropdown-item" href="#">
-      <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-      Activity Log
-    </a>
+    @endif
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-      <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
         <a class="dropdown-item" href="{{ route('logout') }}"
            onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
+           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Salir
         </a>
 
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
-    </a>
   </div>
 </li>
-
 </ul>
+
+</div>

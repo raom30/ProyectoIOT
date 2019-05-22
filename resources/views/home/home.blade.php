@@ -1,6 +1,11 @@
 @extends('layout.layout')
 
 @section('index')
+@if(Auth::user()->hasRole('user'))
+    <div class="alert alert-danger" role="alert">
+      Necesita que un administrador le de acceso a todo el contenido web. Porfavor póngase en contacto con uno.
+    </div>
+@endif
 <div class="row">
     <div class="col-md-12 text-center">
     	<h1>Bienvenido a la gestión de su hogar</h1>
