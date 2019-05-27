@@ -6,15 +6,17 @@
 </div>
 <form class="mt-4 ml-2" action="#" id="formTemp">
     <div class="form-group row">
-      <label for="example-date-input" class="col-2 col-form-label">Fecha</label>
+      <label for="example-date-input" class="col-1 col-form-label">Desde</label>
       <div class="col-3">
         <input class="form-control" type="date" value="" id="fechaTemperatura1" name="fechaTemperatura1">
       </div>
+      <label for="example-date-input" class="col-1 col-form-label">Hasta</label>
         <div class="col-3">
         <input class="form-control" type="date" value="" id="fechaTemperatura2" name="fechaTemperatura2">
       </div>
         <div class="col-3">
       <button type="submit" id="submitTemp" class="btn btn-primary">Filtrar</button>
+      <a type="button" href="" id="submitHum" class="btn btn-primary">Volver a tiempo real</a>
       </div>
     </div>
 </form>
@@ -23,15 +25,17 @@
 
 <form class="mt-4 ml-2" action="#" id="formHum">
 <div class="form-group row">
-  <label for="example-date-input" class="col-2 col-form-label">Fecha</label>
+  <label for="example-date-input" class="col-1 col-form-label">Desde</label>
   <div class="col-3">
     <input class="form-control" type="date" value="" id="fechaHumedad1" name="fechaHumedad1">
   </div>
+  <label for="example-date-input" class="col-1 col-form-label">Hasta</label>
     <div class="col-3">
     <input class="form-control" type="date" value="" id="fechaHumedad2" name="fechaHumedad2">
   </div>
     <div class="col-3">
   <button type="submit" id="submitHum" class="btn btn-primary">Filtrar</button>
+  <a type="button" href="" id="submitHum" class="btn btn-primary">Volver a tiempo real</a>
   </div>
 </div>
 </form>

@@ -27,16 +27,22 @@
                 <td>
                 <form method="post" action="{{ url('cambiarRol') }}" enctype="multipart/form-data">
                 @csrf 
-            	  <div class="form-group">
+            	  <div class="form-group row">
+            	  	<div class="col-md-4">
                     <label for="rol">Cambiar Roles</label>
+                   </div>
+                   <div class="col-md-4"> 
                     <select class="form-control" id="rol" name="rol">
                      @foreach($roles as $role)
                       <option value="{{ $role->id }}">{{ $role->name }}</option>
                      @endforeach 
                     </select>
+                    </div>
                     <input type="hidden" value="{{ $user->id }}" name="uid" id="uid" >
+                  <div class="col-md-4">
+                 	 <button type="submit" class="btn btn-primary"><i class="fas fa-exchange-alt"></i></button>
                   </div>
-                  <button type="submit" class="btn btn-primary"><i class="fas fa-exchange-alt"></i></button>
+                  </div>
                 </form>
                 </td>
               </tr>

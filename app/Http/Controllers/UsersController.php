@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use App\Role;
+use App\Role_User;
 use App\User;
 
 class UsersController extends Controller
@@ -16,8 +17,6 @@ class UsersController extends Controller
         
         $roles = Role::all();
         
-       // Log::debug($user[0]->rol->name);
-
         return view('config/users',['users' => $user,'roles' => $roles]);
     }
     
@@ -30,9 +29,13 @@ class UsersController extends Controller
         
         Log::debug($user);
         
-        $user->roles()->updateExistingPivot($request->input('rol'), ['role_id' => $request->input('rol')]);
+        $role_user = Role_User::where('user_id', $user->id)->first();
         
-        //User::updateExistingPivot($callback);
+        Log::debug($role_user);
+        
+        $role_user->role_id = $request->input('rol');
+        $role_user->save();
+
         
         return redirect('configuracionUsuarios');
     }

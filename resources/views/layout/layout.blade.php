@@ -51,11 +51,6 @@
     <div id="content-wrapper" class="d-flex flex-column">
           <!-- Main Content -->
         <div id="content">
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        @include('topbar.topbar')
-        </nav>
-        <!-- End of Topbar -->
          @yield('index')
          @yield('sidebar')
          @yield('users')
