@@ -7,11 +7,11 @@
 DHT11 dht11(D4);
 
 /*const char* ssid = "vodafoneA390";
-const char* password = "DT6P39QUNV7EPW";
+const char* password = "******";
 const char* host = "http://192.168.0.164:8000/api";*/
 
 const char* ssid = "wifiRafa";
-const char* password = "laleche1";
+const char* password = "*****";
 const char* host = "http://floweb.es/api";
 
 void setup()
